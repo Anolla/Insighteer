@@ -1,4 +1,3 @@
-import SocketProvider from "./context/socket";
 import Nav from "./components/nav";
 import SideNav from "./components/sidenav";
 import Totals from "./components/totals";
@@ -11,7 +10,7 @@ import AverageTickets from "./components/average-tickets";
 
 function App() {
   return (
-    <SocketProvider>
+    <>
       <Nav />
       <Totals />
       <Chart />
@@ -24,7 +23,7 @@ function App() {
         <TaState />
         <Footer />
       </main>
-    </SocketProvider>
+    </>
   );
 }
 
