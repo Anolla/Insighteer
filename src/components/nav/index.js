@@ -1,7 +1,8 @@
 import { Heading } from "@chakra-ui/react";
+import './style.scss'
 
 function Nav() {
-  return <Heading>Nav</Heading>;
+  return <header>Nav</header>;
 }
 
 export default Nav;

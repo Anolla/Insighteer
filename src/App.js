@@ -8,14 +8,17 @@ import TicketsStatus from "./components/tickets-status";
 import TaState from "./components/ta-state";
 import AverageTickets from "./components/average-tickets";
 
+import './utilities/reset.scss'
+import './utilities/global.scss'
+
 function App() {
   return (
     <>
       <Nav />
-      <Totals />
-      <Chart />
       <SideNav />
       <main>
+        <Totals />
+        <Chart />
         <Chart />
         <TicketsStatus />
         <Levels />
