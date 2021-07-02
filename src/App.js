@@ -13,18 +13,17 @@ function App() {
   return (
     <SocketProvider>
       <Nav />
-      <Totals/>
-      <Chart/>
-      <SideNav/>
+      <Totals />
+      <Chart />
+      <SideNav />
       <main>
-      <Chart/>
-      <TicketsStatus/>
-      <Levels/>
-      <AverageTickets/>
-      <TaState/>
-      <Footer/>
+        <Chart />
+        <TicketsStatus />
+        <Levels />
+        <AverageTickets />
+        <TaState />
+        <Footer />
       </main>
-     
     </SocketProvider>
   );
 }
