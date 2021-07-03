@@ -20,18 +20,17 @@ function App() {
       <Nav />
       <SideNav />
       <main>
+        <div className='daily'>
         <Totals />
         <Chart />
         <TicketsStatus />
+        </div>
+        <div className='blocks'>
         <Levels />
         <AverageTickets />
         <TaState />
+        </div>
         <Footer />
-        <button onClick={()=>{socket.emit('changeRole')}}>Change role</button>
-        <button onClick={()=>{socket.emit('createTicket')}}>Create</button>
-        <button onClick={()=>{socket.emit('claimTicket')}}>Claimd</button>
-        <button onClick={()=>{socket.emit('closeTicket')}}>Close</button>
-        <button onClick={()=>{socket.emit('changeRoom')}}>Change room</button>
       </main>
     </DataProvider>
   );

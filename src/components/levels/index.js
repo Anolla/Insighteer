@@ -4,7 +4,7 @@ import { DataContext } from "../../context/data";
 
 function Levels() {
   const context = useContext(DataContext);
-  return <Heading>Levels {context.test}</Heading>;
+  return <div>Levels {context.test}</div>;
 }
 
 export default Levels;

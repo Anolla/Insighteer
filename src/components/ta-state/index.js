@@ -4,7 +4,7 @@ import { Heading } from "@chakra-ui/react";
 
 function TaState() {
   const context = useContext(DataContext);
-  return <Heading>TaState {context.test}</Heading>;
+  return <div>TaState {context.test}</div>;
 }
 
 export default TaState;

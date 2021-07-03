@@ -4,7 +4,7 @@ import './style.scss'
 
 function Nav() {
   const context = useContext(DataContext);
-  return <header>Nav {context.test}</header>;
+  return <header></header>;
 }
 
 export default Nav;

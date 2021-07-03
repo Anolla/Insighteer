@@ -5,8 +5,8 @@ import { DataContext } from "../../context/data";
 
 function AverageTickets() {
   const context = useContext(DataContext);
-  return <Heading>AverageTickets {context.test}
-  </Heading>;
+  return <div>AverageTickets {context.test}
+  </div>;
 }
 
 export default AverageTickets;

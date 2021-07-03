@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import "./variables";
 
 body {
   font-family: "Rubik" !important;
   margin: 0;
+  background-color: $bg;
+  color: $text;
 }
 
 .flexRow {
@@ -20,7 +23,42 @@ body {
 }
 
 main {
-  padding-top: 36px;
-  padding-left: 200px;
-  background-color: green;
+  margin-top: 5vh;
+  margin-left: 200px;
+  padding: 0 25px;
+}
+
+.daily {
+  background-color: white;
+  margin-bottom: 2vh;
+  box-shadow: 0 0 0.6px 0.1px black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 55vh;
+  div{
+    width: 100%;
+  }
+}
+.blocks {
+  height: 33vh;
+  margin-bottom: 2vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  div {
+    background-color: white;
+    width: 32%;
+    box-shadow: 0 0 0.6px 0.1px black;
+  }
+}
+
+footer {
+  height: 3vh;
+  text-align: center;
+}
+
+h2 {
+  margin: 0;
 }

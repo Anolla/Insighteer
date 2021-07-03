@@ -1,0 +1,10 @@
+@import '../../utilities/variables';
+
+footer a{
+  text-decoration: none;
+  font-weight: bolder;
+  color: $dark;
+  &:hover{
+    color: $blue;
+  }
+}
