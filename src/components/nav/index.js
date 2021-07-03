@@ -1,8 +1,13 @@
-import { Heading } from "@chakra-ui/react";
+import { useContext } from "react";
+import { DataContext } from "../../context/data";
 import './style.scss'
 
 function Nav() {
-  return <header>Nav</header>;
+  const context = useContext(DataContext);
+  return <header>Nav {context.test}</header>;
 }
 
 export default Nav;
+
+
+
