@@ -1,4 +1,4 @@
-import { Box, Avatar, Badge } from "@chakra-ui/react";
+import { Box, Avatar, Badge, Tooltip } from "@chakra-ui/react";
 import moment from 'moment'
 
 function Card(props) {
@@ -20,12 +20,14 @@ function Card(props) {
             >
               {user.name}
             </Box>
-            <Badge borderRadius="full" px="2" colorScheme={props.color}>
-              {user.points}
-            </Badge>
+            <Tooltip label="Points" aria-label="A tooltip">
+              <Badge borderRadius="full" px="2" colorScheme={props.color}>
+                {user.points}
+              </Badge>
+            </Tooltip>
           </Box>
           <Box color="gray" fontSize="xs" paddingTop="2">
-            Last Ticket: {user.last ? moment(user.last*1000).startOf('s').fromNow() : 'none'}
+            Last Ticket: {user.last ? moment(user.last * 1000).startOf('s').fromNow() : 'none'}
           </Box>
 
         </Box>
