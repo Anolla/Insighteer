@@ -26,7 +26,7 @@ function SideNav() {
         </AccordionButton>
       </h2>
       <AccordionPanel pb={4}>
-
+        <Card users={context.users.available} color={'green'} />
       </AccordionPanel>
     </AccordionItem>
 
@@ -40,7 +40,7 @@ function SideNav() {
         </AccordionButton>
       </h2>
       <AccordionPanel pb={4}>
-
+        <Card users={context.users.inTicket} color={'yellow'} />
       </AccordionPanel>
     </AccordionItem>
 
@@ -54,7 +54,7 @@ function SideNav() {
         </AccordionButton>
       </h2>
       <AccordionPanel pb={4}>
-
+      <Card users={context.users.notAvailable} color={'red'} />
       </AccordionPanel>
     </AccordionItem>
 
@@ -69,7 +69,7 @@ function SideNav() {
         </AccordionButton>
       </h2>
       <AccordionPanel pb={4}>
-
+      <Card users={context.users.excused} color={'purple'} />
       </AccordionPanel>
     </AccordionItem>
   </Accordion></div>;
