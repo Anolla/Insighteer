@@ -1,6 +1,12 @@
 import { useContext } from "react";
 import { DataContext } from "../../context/data";
-import { Heading } from "@chakra-ui/react";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+} from "@chakra-ui/react"
 
 function TaState() {
   const context = useContext(DataContext);

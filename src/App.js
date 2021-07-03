@@ -7,32 +7,35 @@ import Levels from "./components/levels";
 import TicketsStatus from "./components/tickets-status";
 import TaState from "./components/ta-state";
 import AverageTickets from "./components/average-tickets";
-
-import {socket } from "./context/socket";
 import DataProvider from "./context/data";
+import { ChakraProvider } from "@chakra-ui/react"
 
 import "./utilities/reset.scss";
 import "./utilities/global.scss";
+// import 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css'
 
 function App() {
   return (
-    <DataProvider>
-      <Nav />
-      <SideNav />
-      <main>
-        <div className='daily'>
-        <Totals />
-        <Chart />
-        <TicketsStatus />
-        </div>
-        <div className='blocks'>
-        <Levels />
-        <AverageTickets />
-        <TaState />
-        </div>
-        <Footer />
-      </main>
-    </DataProvider>
+    <ChakraProvider>
+      <DataProvider>
+        <Nav />
+        <SideNav />
+        <main>
+          <div className='daily'>
+            <Totals />
+            <Chart />
+            <TicketsStatus />
+          </div>
+          <div className='blocks'>
+            <Levels />
+            <AverageTickets />
+            <TaState />
+          </div>
+          <Footer />
+        </main>
+      </DataProvider>
+    </ChakraProvider>
+
   );
 }
 

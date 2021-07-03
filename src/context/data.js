@@ -48,10 +48,10 @@ export default function Data(props) {
       console.log("createTicket");
     });
     socket.on("claimUnclaimCloseTicket", (payload) => {
-      // console.log("from server", payload);
+      console.log("from server", payload);
+      setUsers(payload.users);
       setDailyTicketsInfo(payload.dailyTicketsInfo);
       setAverage(payload.average);
-      setUsers(payload.users);
       console.log("claimTicket");
     });
     socket.on("changeRoom", (payload) => {
