@@ -8,25 +8,32 @@ import TicketsStatus from "./components/tickets-status";
 import TaState from "./components/ta-state";
 import AverageTickets from "./components/average-tickets";
 
-import './utilities/reset.scss'
-import './utilities/global.scss'
+import {socket } from "./context/socket";
+import DataProvider from "./context/data";
+
+import "./utilities/reset.scss";
+import "./utilities/global.scss";
 
 function App() {
   return (
-    <>
+    <DataProvider>
       <Nav />
       <SideNav />
       <main>
         <Totals />
-        <Chart />
         <Chart />
         <TicketsStatus />
         <Levels />
         <AverageTickets />
         <TaState />
         <Footer />
+        <button onClick={()=>{socket.emit('changeRole')}}>Change role</button>
+        <button onClick={()=>{socket.emit('createTicket')}}>Create</button>
+        <button onClick={()=>{socket.emit('claimTicket')}}>Claimd</button>
+        <button onClick={()=>{socket.emit('closeTicket')}}>Close</button>
+        <button onClick={()=>{socket.emit('changeRoom')}}>Change room</button>
       </main>
-    </>
+    </DataProvider>
   );
 }
 

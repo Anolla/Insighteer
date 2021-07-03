@@ -1,7 +1,11 @@
+import { useContext } from "react";
+import { DataContext } from "../../context/data";
 import { Heading } from "@chakra-ui/react";
 
 function Totals() {
-  return <Heading>Totals</Heading>;
+  const context = useContext(DataContext);
+  return <Heading>Totals {JSON.stringify(context.totals)}</Heading>;
 }
 
 export default Totals;
+

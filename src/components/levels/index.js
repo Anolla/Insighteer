@@ -1,8 +1,10 @@
 import { Heading } from "@chakra-ui/react";
-
+import { useContext } from "react";
+import { DataContext } from "../../context/data";
 
 function Levels() {
-  return <Heading>Levels</Heading>;
+  const context = useContext(DataContext);
+  return <Heading>Levels {context.test}</Heading>;
 }
 
 export default Levels;
