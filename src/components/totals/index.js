@@ -5,6 +5,7 @@ import './style.scss'
 
 function Totals() {
   const context = useContext(DataContext);
+  // context.totals
   return <div className='total'>Totals</div>;
 }
 

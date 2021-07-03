@@ -5,8 +5,8 @@ import "./style.scss";
 
 function SideNav() {
   const context = useContext(DataContext);
-
-  return <div className="sidenav">Side Nav {context.test}</div>;
+  // context.users
+  return <div className="sidenav">Side Nav</div>;
 }
 
 export default SideNav;

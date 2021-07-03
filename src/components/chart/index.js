@@ -4,7 +4,8 @@ import { Heading } from "@chakra-ui/react";
 import './style.scss'
 function Chart() {
   const context = useContext(DataContext);
-  return <div className='chart'>Chart {context.test}</div>;
+  // context.chart
+  return <div className='chart'>Chart</div>;
 }
 
 export default Chart;
