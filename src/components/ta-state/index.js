@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { DataContext } from "../../context/data";
-import { Image, Box, Heading, Center } from "@chakra-ui/react";
+import { Image, Box, Heading } from "@chakra-ui/react";
 import glasses from "../../utilities/assets/relieved_face.gif";
 import chilling from "../../utilities/assets/yawning_face.gif";
 import sleepy from "../../utilities/assets/sleeping_face.gif";
