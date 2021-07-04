@@ -23,7 +23,7 @@ export default function Data(props) {
 
     // console.log("from server", payload);
     setUsers(payload.users);
-    setTotals(payload.totals);
+    setTotals(payload.total);
     setChart(payload.chart);
     setDailyTicketsLevels(payload.dailyTicketsLevels);
     setDailyTicketsInfo(payload.dailyTicketsInfo);
