@@ -17,6 +17,7 @@ export default function Data(props) {
     avgOpened: 0,
     avgTicketsPerStudent: 1
   });
+
   const loadAll = async () => {
     const results = await superagent.get('http://localhost:3030/all');
     const payload = results.body;
@@ -28,9 +29,9 @@ export default function Data(props) {
     setDailyTicketsLevels(payload.dailyTicketsLevels);
     setDailyTicketsInfo(payload.dailyTicketsInfo);
     setAverage(payload.average);
-    console.log("all");
   }
   useEffect(() => {
+
     loadAll()
     socket.on("changeRole", (payload) => {
       // console.log("from server", payload);
@@ -59,7 +60,27 @@ export default function Data(props) {
       setUsers(payload.users);
       console.log("changeRoom");
     });
+
+    // let x = 0;
+    // setInterval(()=>{
+    //   if(x == 4){x =0}
+    //   const arr = [[0,1,1] ,[0,1,0] , [0,1,0], [1,1,0] , [1,0,0]]
+
+    //   console.log('done' , arr[x])
+    //   setUsers({available : arr[x][1]});
+    //   setDailyTicketsInfo({opened : arr[x][0] , claimed : arr[x][2]});
+    //   x++
+    //   console.log(x)
+  
+    // },5000)
   }, []);
+
+
+
+
+
+
+
 
   const state = {
     test,
@@ -69,8 +90,9 @@ export default function Data(props) {
     chart,
     dailyTicketsLevels,
     dailyTicketsInfo,
-    average,
+    average
   };
+
 
   return (
     <DataContext.Provider value={state}>{props.children}</DataContext.Provider>

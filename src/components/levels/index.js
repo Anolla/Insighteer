@@ -36,7 +36,7 @@ function Levels() {
       values: [Number((context.dailyTicketsLevels['102'] / total).toFixed(2))],
       text: '102',
       backgroundColor: '#50ADF5',
-      detached: true,
+      detached: false,
       tooltip: {
         fontSize: '16',
         fontFamily: "Open Sans",
@@ -48,7 +48,7 @@ function Levels() {
       values: [Number((context.dailyTicketsLevels['201'] / total).toFixed(2))],
       text: "201",
       backgroundColor: '#FF7965',
-      detached: true,
+      detached: false,
       tooltip: {
         fontSize: '16',
         fontFamily: "Open Sans",
@@ -60,7 +60,7 @@ function Levels() {
       values: [Number((context.dailyTicketsLevels['301'] / total).toFixed(2))],
       text: '301',
       backgroundColor: '#FFCB45',
-      detached: true,
+      detached: false,
       tooltip: {
         fontSize: '16',
         fontFamily: "Open Sans",
@@ -72,7 +72,7 @@ function Levels() {
       text: '401 JavaScript',
       values: [Number((context.dailyTicketsLevels['401js'] / total).toFixed(2))],
       backgroundColor: '#6877e5',
-      detached: true,
+      detached: false,
       tooltip: {
         fontSize: '16',
         fontFamily: "Open Sans",
@@ -84,7 +84,7 @@ function Levels() {
         text: '401 Python',
         values: [Number((context.dailyTicketsLevels['401py'] / total).toFixed(2))],
         backgroundColor: '#6FB07F',
-        detached: true,
+        detached: false,
       tooltip: {
         fontSize: '16',
         fontFamily: "Open Sans",
@@ -96,7 +96,7 @@ function Levels() {
         text: '401 Java',
         values: [Number((context.dailyTicketsLevels['401java'] / total).toFixed(2))],
         backgroundColor: '#b06faa',
-        detached: true,
+        detached: false,
       tooltip: {
         fontSize: '16',
         fontFamily: "Open Sans",
