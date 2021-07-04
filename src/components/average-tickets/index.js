@@ -9,7 +9,7 @@ function AverageTickets() {
   return <Box className='item' borderWidth="0px" p='6' overflow="hidden">
     {console.log(context.average)}
     <Heading size='sm'>Averages</Heading>
-    <Box d='flex' h='100%' flexDir='column' fontSize='12px' justifyContent='space-evenly'>
+    <Box p='8px' d='flex' h='100%' flexDir='column' fontSize='12px' justifyContent='space-evenly'>
 
       <Box>
         <Heading fontWeight='400' pb='5px' size='xs'>Ticket until claim time(minute)</Heading>
