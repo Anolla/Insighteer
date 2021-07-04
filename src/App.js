@@ -12,7 +12,7 @@ import { ChakraProvider } from "@chakra-ui/react"
 
 import "./utilities/reset.scss";
 import "./utilities/global.scss";
-// import 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css'
+import 'zingchart/es6';
 
 function App() {
   return (

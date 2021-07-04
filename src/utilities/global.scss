@@ -47,10 +47,11 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  div {
+  .item {
     background-color: white;
     width: 32%;
     box-shadow: 0 0 0.6px 0.1px black;
+    
   }
 }
 

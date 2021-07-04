@@ -18,7 +18,8 @@
     "socket.io-client": "^4.1.2",
     "superagent": "^6.1.0",
     "web-vitals": "^1.1.2",
-    "zingchart": "^2.9.6"
+    "zingchart": "^2.9.6",
+    "zingchart-react": "^3.1.0"
   },
   "scripts": {
     "start": "react-scripts start",

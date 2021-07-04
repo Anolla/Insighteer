@@ -10,7 +10,7 @@ export default function Data(props) {
   const [totals, setTotals] = useState({ tickets: 0, TAs: 44, students: 396 });
   const [users, setUsers] = useState({ available: [], inTicket: [], notAvailable: [], excused: [] });
   const [chart, setChart] = useState([]);
-  const [dailyTicketsLevels, setDailyTicketsLevels] = useState({ '102': 0, '201': 5, '301': 7, '401js': 2, '401java': 4, '401py': 3 });
+  const [dailyTicketsLevels, setDailyTicketsLevels] = useState({ '102': 0, '201': 0, '301': 0, '401js': 0, '401java': 0, '401py': 0 });
   const [dailyTicketsInfo, setDailyTicketsInfo] = useState({ opened: 0, closed: 0, claimed: 0 });
   const [average, setAverage] = useState({
     avgClaimed: 0,
@@ -35,12 +35,12 @@ export default function Data(props) {
     socket.on("changeRole", (payload) => {
       // console.log("from server", payload);
       setUsers(payload.users);
-      setTotals(payload.totals);
+      setTotals(payload.total);
       console.log("changeRole");
     });
     socket.on("createTicket", (payload) => {
       // console.log("from server", payload);
-      setTotals(payload.totals);
+      setTotals(payload.total);
       setChart(payload.chart);
       setDailyTicketsLevels(payload.dailyTicketsLevels);
       setDailyTicketsInfo(payload.dailyTicketsInfo);
