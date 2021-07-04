@@ -18,7 +18,7 @@ function Card(props) {
               textTransform="uppercase"
               ml="2"
             >
-              <Heading fontSize='xs' fontWeight='400'>
+              <Heading fontSize='xs' fontWeight='500'>
 
               {user.name}
               </Heading>
