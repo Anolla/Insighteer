@@ -107,8 +107,7 @@ function Levels() {
     ]
   };
   return <Box className='item' borderWidth="0px" p='6' overflow="hidden">
-    {console.log(context.dailyTicketsLevels, (context.dailyTicketsLevels['102'] / total).toFixed(2))}
-    <Heading size='sm'>Tickets per Level</Heading>
+    <Heading size='sm'>Levels</Heading>
     <ZingChart height='100%' width='100%' data={config} />
   </Box>;
 }

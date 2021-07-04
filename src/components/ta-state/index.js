@@ -1,17 +1,15 @@
 import { useContext } from "react";
 import { DataContext } from "../../context/data";
 import {
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
+  Box,Heading
 } from "@chakra-ui/react"
 
 function TaState() {
   const context = useContext(DataContext);
   // Emojis context.dailyTicketsInfo.opened context.dailyTicketsInfo.users.available 
-  return <div>TaState</div>;
+  return  <Box className='item' borderWidth="0px" p='6' overflow="hidden">
+  <Heading size='sm'>Status</Heading>
+</Box>;
 }
 
 export default TaState;
