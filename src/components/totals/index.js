@@ -12,13 +12,13 @@ function Totals() {
     className='total'
   >
     <GridItem d='flex' justifyContent='space-evenly' alignContent='center' colSpan={1} >
-      <Heading color='#202020' fontWeight='700' className='flexCol' size='sm'>Total Stats</Heading>
+      <Heading color='#202020' fontWeight='700' className='flexCol' size='xs'>Total Stats</Heading>
       <Divider orientation="vertical" />
     </GridItem>
     <GridItem d='flex' justifyContent='space-evenly' alignContent='center' colSpan={2}>
-      <Heading color='#595959' className='flexCol' size='sm'>{context.totals.tickets} Tickets</Heading>
-      <Heading color='#595959' className='flexCol' size='sm'>{context.totals.students} Students</Heading>
-      <Heading color='#595959' className='flexCol' size='sm'>{context.totals.TAs} TAs</Heading>
+      <Heading color='#595959' fontWeight='400' className='flexCol' size='xs'>{context.totals.tickets} Tickets</Heading>
+      <Heading color='#595959' fontWeight='400' className='flexCol' size='xs'>{context.totals.students} Students</Heading>
+      <Heading color='#595959' fontWeight='400' className='flexCol' size='xs'>{context.totals.TAs} TAs</Heading>
     </GridItem>
 
     <GridItem colSpan={1}>

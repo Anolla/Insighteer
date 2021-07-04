@@ -9,10 +9,10 @@ function AverageTickets() {
   return <Box className='item' borderWidth="0px" p='6' overflow="hidden">
     {console.log(context.average)}
     <Heading size='sm'>Averages</Heading>
-    <Box d='flex' h='100%' flexDir='column' justifyContent='space-evenly'>
+    <Box d='flex' h='100%' flexDir='column' fontSize='12px' justifyContent='space-evenly'>
 
       <Box>
-        <Heading fontWeight='500' pb='5px' size='xs'>Ticket until claim time(minute)</Heading>
+        <Heading fontWeight='400' pb='5px' size='xs'>Ticket until claim time(minute)</Heading>
         <Tooltip label={(context.average.avgOpened / 60).toFixed(2)+' minutes'} aria-label="A tooltip">
           <Box d='flex' w='100%'>
             0
@@ -22,7 +22,7 @@ function AverageTickets() {
         </Tooltip>
       </Box>
       <Box>
-        <Heading fontWeight='500' pb='5px' size='xs'>In-Ticket time(minute)</Heading>
+        <Heading fontWeight='400' pb='5px' size='xs'>In-Ticket time(minute)</Heading>
         <Tooltip label={(context.average.avgClaimed / 60).toFixed(2)+' minutes'} aria-label="A tooltip">
           <Box d='flex' w='100%'>
             0
@@ -32,7 +32,7 @@ function AverageTickets() {
         </Tooltip>
       </Box>
       <Box>
-        <Heading fontWeight='500' pb='5px' size='xs'>Tickets per student</Heading>
+        <Heading fontWeight='400' pb='5px' size='xs'>Tickets per student</Heading>
         <Tooltip label={(context.average.avgTicketsPerStudent).toFixed(2)+' tickets'} aria-label="A tooltip">
           <Box d='flex' w='100%'>
             0

@@ -1,4 +1,4 @@
-import { Box, Avatar, Badge, Tooltip } from "@chakra-ui/react";
+import { Box, Avatar, Badge, Tooltip,Heading } from "@chakra-ui/react";
 import moment from 'moment'
 
 function Card(props) {
@@ -9,7 +9,7 @@ function Card(props) {
 
         <Box p="2">
           <Box d="flex" justifyContent="space-between" alignItems="center">
-            <Avatar name={user.name} src={user.avatar} />
+            <Avatar size='sm' name={user.name} src={user.avatar} />
             <Box
               color="black.500"
               fontWeight="semibold"
@@ -18,7 +18,10 @@ function Card(props) {
               textTransform="uppercase"
               ml="2"
             >
+              <Heading fontSize='xs' fontWeight='400'>
+
               {user.name}
+              </Heading>
             </Box>
             <Tooltip label="Points" aria-label="A tooltip">
               <Badge borderRadius="full" px="2" colorScheme={props.color}>
