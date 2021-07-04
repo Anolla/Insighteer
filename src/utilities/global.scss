@@ -9,14 +9,14 @@ body {
 }
 
 .flexRow {
-  display: flex;
+  display: flex !important;
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
 }
 
 .flexCol {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -24,7 +24,7 @@ body {
 
 main {
   margin-top: 5vh;
-  margin-left: 200px;
+  margin-left: 280px;
   padding: 0 25px;
 }
 
@@ -61,4 +61,19 @@ footer {
 
 h2 {
   margin: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: $bg;
+  box-shadow: 0 0 1px 0.1px $dark;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $dark;
+  border-radius: 1px;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
 }
