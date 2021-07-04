@@ -1,3 +1,4 @@
+@import '../../utilities/variables';
 .ticketStatus{
   height: 10vh;
   display: flex;
@@ -9,6 +10,7 @@
     height: 100%;
     width: 31% !important;
     box-shadow: 0 0 0.6px 0.1px black;
+    // background-color: $bg;
   }
   margin-top: 2vh;
   margin-bottom: 2vh;

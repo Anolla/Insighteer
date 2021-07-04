@@ -22,8 +22,8 @@ function Levels() {
         placement: "in",
         text: "%t",
         fontFamily: "Open Sans",
-        fontSize: "8",
-        color:'black'
+        fontSize: "10",
+        color:'#1C2634'
       },
 
       animation: {
@@ -45,7 +45,7 @@ function Levels() {
         ],
         text: "102",
         backgroundColor: "#50ADF5",
-        detached: false,
+        detached: true,
         tooltip: {
           fontSize: "16",
           fontFamily: "Open Sans",
@@ -59,7 +59,7 @@ function Levels() {
           Number((context.dailyTicketsLevels["401java"] / total).toFixed(2)),
         ],
         backgroundColor: "#b06faa",
-        detached: false,
+        detached: true,
         tooltip: {
           fontSize: "16",
           fontFamily: "Open Sans",
@@ -73,7 +73,7 @@ function Levels() {
         ],
         text: "201",
         backgroundColor: "#FF7965",
-        detached: false,
+        detached: true,
         tooltip: {
           fontSize: "16",
           fontFamily: "Open Sans",
@@ -87,7 +87,7 @@ function Levels() {
           Number((context.dailyTicketsLevels["401js"] / total).toFixed(2)),
         ],
         backgroundColor: "#6877e5",
-        detached: false,
+        detached: true,
         tooltip: {
           fontSize: "16",
           fontFamily: "Open Sans",
@@ -101,7 +101,7 @@ function Levels() {
         ],
         text: "301",
         backgroundColor: "#FFCB45",
-        detached: false,
+        detached: true,
         tooltip: {
           fontSize: "16",
           fontFamily: "Open Sans",
@@ -116,7 +116,7 @@ function Levels() {
           Number((context.dailyTicketsLevels["401py"] / total).toFixed(2)),
         ],
         backgroundColor: "#6FB07F",
-        detached: false,
+        detached: true,
         tooltip: {
           fontSize: "16",
           fontFamily: "Open Sans",

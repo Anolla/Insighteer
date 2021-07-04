@@ -7,7 +7,6 @@ function AverageTickets() {
   const context = useContext(DataContext);
   // context.average
   return <Box className='item' borderWidth="0px" p='6' overflow="hidden">
-    {console.log(context.average)}
     <Heading size='sm'>Averages</Heading>
     <Box p='8px' d='flex' h='100%' flexDir='column' fontSize='12px' justifyContent='space-evenly'>
 
