@@ -24,10 +24,14 @@ function Chart() {
       adjustLayout: true
     },
     scaleX: {
+      label: {
+        text: "Tickets Track"
+      },
       labels: data[0]
     },
     series: [{
-      values: data[1]
+      values: data[1],
+      backgroundColor: '#385898'
     }
     ]
   };
