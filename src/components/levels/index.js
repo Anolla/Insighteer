@@ -16,7 +16,7 @@ function Levels() {
     type: "pie",
     plot: {
       borderColor: "#2B313B",
-      borderWidth: 1,
+      borderWidth: 2,
       // slice: 90,
       valueBox: {
         placement: "in",
@@ -45,7 +45,7 @@ function Levels() {
         ],
         text: "102",
         backgroundColor: "#50ADF5",
-        detached: true,
+        detached: false,
         tooltip: {
           fontSize: "16",
           fontFamily: "Open Sans",
@@ -59,7 +59,7 @@ function Levels() {
           Number((context.dailyTicketsLevels["401java"] / total).toFixed(2)),
         ],
         backgroundColor: "#b06faa",
-        detached: true,
+        detached: false,
         tooltip: {
           fontSize: "16",
           fontFamily: "Open Sans",
@@ -73,7 +73,7 @@ function Levels() {
         ],
         text: "201",
         backgroundColor: "#FF7965",
-        detached: true,
+        detached: false,
         tooltip: {
           fontSize: "16",
           fontFamily: "Open Sans",
@@ -87,7 +87,7 @@ function Levels() {
           Number((context.dailyTicketsLevels["401js"] / total).toFixed(2)),
         ],
         backgroundColor: "#6877e5",
-        detached: true,
+        detached: false,
         tooltip: {
           fontSize: "16",
           fontFamily: "Open Sans",
@@ -101,7 +101,7 @@ function Levels() {
         ],
         text: "301",
         backgroundColor: "#FFCB45",
-        detached: true,
+        detached: false,
         tooltip: {
           fontSize: "16",
           fontFamily: "Open Sans",
@@ -116,7 +116,7 @@ function Levels() {
           Number((context.dailyTicketsLevels["401py"] / total).toFixed(2)),
         ],
         backgroundColor: "#6FB07F",
-        detached: true,
+        detached: false,
         tooltip: {
           fontSize: "16",
           fontFamily: "Open Sans",
