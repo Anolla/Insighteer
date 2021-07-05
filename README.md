@@ -3,7 +3,7 @@
 Dashboard for ASAC Discord server.
 
 * Deployment:
-  * Soon.
+  * [https://insighteer.netlify.app/](https://insighteer.netlify.app/)
 
 * Tools:
   * Figma.
