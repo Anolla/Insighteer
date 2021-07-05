@@ -29,7 +29,7 @@ function TaState() {
           message = "We covered everything and we are ready for more";
         }
       } else if (opened) {
-        if(opened > 5){
+        if(opened >= 5){
           face = sleepy;
           message = "There are tickets but I am sleepy";
 
