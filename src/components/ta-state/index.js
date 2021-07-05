@@ -22,8 +22,8 @@ function TaState() {
     if (available) {
       if (!opened) {
         if (!claimed) {
-          face = chilling; 
-          message = "We are chilling until any ticket comes";
+          face = chilling;  
+          message = "We are chilling until any ticket is raised";
         } else if (claimed) {
           face = glasses;
           message = "We covered everything and we are ready for more";
