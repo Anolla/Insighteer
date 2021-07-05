@@ -1,10 +1,11 @@
 import { useContext, useEffect, useState } from "react";
 import { DataContext } from "../../context/data";
-import { Image, Box, Heading, Center } from "@chakra-ui/react";
-import glasses from "../../utilities/assets/relieved_face.gif";
-import chilling from "../../utilities/assets/yawning_face.gif";
+import { Image, Box, Heading } from "@chakra-ui/react";
+import glasses from "../../utilities/assets/smiling_face_with_sunglasses.gif";
+import chilling from "../../utilities/assets/relieved_face.gif";
+import yawning from "../../utilities/assets/yawning_face.gif";
 import sleepy from "../../utilities/assets/sleeping_face.gif";
-import overload from "../../utilities/assets/face_with_head_bandage.gif";
+import overload from "../../utilities/assets/exploding_head.gif";
 import head from "../../utilities/assets/face_with_head_bandage.gif";
 import switcher from "../../utilities/assets/fireworks.gif";
 
@@ -21,23 +22,29 @@ function TaState() {
     if (available) {
       if (!opened) {
         if (!claimed) {
-          face = glasses;
-          message = "We are cover everything and we ready for more";
+          face = chilling; 
+          message = "We are chilling until any ticket comes";
         } else if (claimed) {
-          face = chilling; // no acatly ticket and work
-          message = "We are chilling until any ticket came";
+          face = glasses;
+          message = "We covered everything and we are ready for more";
         }
       } else if (opened) {
-        face = sleepy;
-        message = "There is ticket and i am sleepy";
+        if(opened > 5){
+          face = sleepy;
+          message = "There are tickets but I am sleepy";
+
+        }else if(opened < 5){
+          face = yawning;
+          message = "There are some tickets but I am lazy to take one";
+        }
       }
     } else if (!available) {
       if (opened) {
         face = overload;
-        message = "We are all busy with tickets and still there is more!!";
+        message = "We are busy solving tickets and there are more !!";
       } else if (!opened) {
         face = head;
-        message = "Please no more ticket, we cant handle them";
+        message = "No more tickets or will be explode";
       }
     }
     if (face !== imageInfo.face) {

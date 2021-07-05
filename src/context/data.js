@@ -19,7 +19,7 @@ export default function Data(props) {
   });
 
   const loadAll = async () => {
-    const results = await superagent.get('http://localhost:3030/all');
+    const results = await superagent.get('https://bot.codeowners.net/all');
     const payload = results.body;
 
     // console.log("from server", payload);

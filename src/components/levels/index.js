@@ -16,14 +16,14 @@ function Levels() {
     type: "pie",
     plot: {
       borderColor: "#2B313B",
-      borderWidth: 1,
+      borderWidth: 2,
       // slice: 90,
       valueBox: {
         placement: "in",
         text: "%t",
         fontFamily: "Open Sans",
-        fontSize: "8",
-        color:'black'
+        fontSize: "10",
+        color:'#1C2634'
       },
 
       animation: {

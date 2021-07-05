@@ -16,9 +16,9 @@ function Totals() {
       <Divider orientation="vertical" />
     </GridItem>
     <GridItem d='flex' justifyContent='space-evenly' alignContent='center' colSpan={2}>
-      <Heading color='#595959' fontWeight='400' className='flexCol' size='xs'>{context.totals.tickets} Tickets</Heading>
-      <Heading color='#595959' fontWeight='400' className='flexCol' size='xs'>{context.totals.students} Students</Heading>
-      <Heading color='#595959' fontWeight='400' className='flexCol' size='xs'>{context.totals.TAs} TAs</Heading>
+      <Heading  fontWeight='500' className='flexCol' size='xs'>{context.totals.tickets} Tickets</Heading>
+      <Heading  fontWeight='500' className='flexCol' size='xs'>{context.totals.students} Students</Heading>
+      <Heading  fontWeight='500' className='flexCol' size='xs'>{context.totals.TAs} TAs</Heading>
     </GridItem>
 
     <GridItem colSpan={1}>

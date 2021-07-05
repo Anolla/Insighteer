@@ -13,13 +13,10 @@ function Card(props) {
             <Box
               color="black.500"
               fontWeight="semibold"
-              letterSpacing="wide"
               fontSize="xs"
-              textTransform="uppercase"
               ml="2"
             >
               <Heading fontSize='xs' fontWeight='500'>
-
               {user.name}
               </Heading>
             </Box>

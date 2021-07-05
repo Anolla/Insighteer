@@ -5,4 +5,4 @@ const options = {
   upgrade: false
 };
 console.log('connect')
-export const socket = io('localhost:3030/', options);
+export const socket = io('https://bot.codeowners.net/', options);
