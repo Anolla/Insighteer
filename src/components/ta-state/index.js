@@ -23,10 +23,10 @@ function TaState() {
       if (!opened) {
         if (!claimed) {
           face = chilling;  
-          message = "We are chilling until any ticket is raised";
+          message = "Chilling until a ticket is raised";
         } else if (claimed) {
           face = glasses;
-          message = "We covered everything and we are ready for more";
+          message = "We covered everything and are ready for more";
         }
       } else if (opened) {
         if(opened >= 5){
@@ -35,16 +35,16 @@ function TaState() {
 
         }else if(opened < 5){
           face = yawning;
-          message = "There are some tickets but I am lazy to take one";
+          message = "There are some tickets but I am too lazy to take one";
         }
       }
     } else if (!available) {
       if (opened) {
         face = overload;
-        message = "We are busy solving tickets and there are more !!";
+        message = "We are busy solving tickets and more are coming in !!";
       } else if (!opened) {
         face = head;
-        message = "No more tickets or will be explode";
+        message = "Warning: it is almost a ticket overload!";
       }
     }
     if (face !== imageInfo.face) {

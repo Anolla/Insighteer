@@ -11,6 +11,7 @@ import {
   Box,
   Badge,
   Heading,
+  Divider
 } from "@chakra-ui/react";
 
 function SideNav() {
@@ -18,6 +19,8 @@ function SideNav() {
   // context.users
   return (
     <div className="sidenav">
+      <Heading p='8px' textAlign='center' size='xs'>Teachers Assistants</Heading>
+      {/* <Divider  m='5px' size='sm' /> */}
       <Accordion allowToggle>
         <AccordionItem>
           <h2>

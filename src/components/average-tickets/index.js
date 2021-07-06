@@ -11,7 +11,7 @@ function AverageTickets() {
     <Box p='8px' d='flex' h='100%' flexDir='column' fontSize='12px' justifyContent='space-evenly'>
 
       <Box>
-        <Heading fontWeight='400' pb='5px' size='xs'>Ticket until claim time(minute)</Heading>
+        <Heading fontWeight='400' pb='5px' size='xs'>Pending ticket time(minutes)</Heading>
         <Tooltip label={(context.average.avgOpened / 60).toFixed(2)+' minutes'} aria-label="A tooltip">
           <Box d='flex' w='100%'>
             0
@@ -21,7 +21,7 @@ function AverageTickets() {
         </Tooltip>
       </Box>
       <Box>
-        <Heading fontWeight='400' pb='5px' size='xs'>In-Ticket time(minute)</Heading>
+        <Heading fontWeight='400' pb='5px' size='xs'>Ticket processing time(minutes)</Heading>
         <Tooltip label={(context.average.avgClaimed / 60).toFixed(2)+' minutes'} aria-label="A tooltip">
           <Box d='flex' w='100%'>
             0
