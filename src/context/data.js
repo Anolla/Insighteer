@@ -37,7 +37,7 @@ export default function Data(props) {
       // console.log("from server", payload);
       setUsers(payload.users);
       setTotals(payload.total);
-      console.log("changeRole");
+      // console.log("changeRole");
     });
     socket.on("createTicket", (payload) => {
       // console.log("from server", payload);
@@ -46,19 +46,19 @@ export default function Data(props) {
       setDailyTicketsLevels(payload.dailyTicketsLevels);
       setDailyTicketsInfo(payload.dailyTicketsInfo);
       setAverage(payload.average);
-      console.log("createTicket");
+      // console.log("createTicket");
     });
     socket.on("claimUnclaimCloseTicket", (payload) => {
       console.log("from server", payload);
       setUsers(payload.users);
       setDailyTicketsInfo(payload.dailyTicketsInfo);
       setAverage(payload.average);
-      console.log("claimTicket");
+      // console.log("claimTicket");
     });
     socket.on("changeRoom", (payload) => {
       // console.log("from server", payload);
       setUsers(payload.users);
-      console.log("changeRoom");
+      // console.log("changeRoom");
     });
 
     // let x = 0;
