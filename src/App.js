@@ -19,8 +19,8 @@ import "zingchart/es6";
 
 function App() {
   return (
-    <If condition={window.screen.width > 600}>
-      <Then>
+    // <If condition={window.screen.width > 600}>
+    //   <Then>
         <ChakraProvider>
           <DataProvider>
             <Nav />
@@ -40,14 +40,14 @@ function App() {
             </main>
           </DataProvider>
         </ChakraProvider>
-      </Then>
-      <Else>
-        <Image style={{ width: "100%" }} src={error} />
-        <h4 style={{ textAlign: "center", padding: "15px", color: "#99aab5" }}>
-          This Dashboard is only supported for larger screens
-        </h4>
-      </Else>
-    </If>
+    //   </Then>
+    //   <Else>
+    //     <Image style={{ width: "100%" }} src={error} />
+    //     <h4 style={{ textAlign: "center", padding: "15px", color: "#99aab5" }}>
+    //       This Dashboard is only supported for larger screens
+    //     </h4>
+    //   </Else>
+    // </If>
   );
 }
 

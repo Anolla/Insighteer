@@ -14,6 +14,14 @@ function Levels() {
     context.dailyTicketsLevels["401java"];
   const config = {
     type: "pie",
+    gui: {
+      contextMenu: {
+        button: {
+          visible: false
+        },
+        empty: true
+      },
+    },
     plot: {
       borderColor: "#2B313B",
       borderWidth: 2,

@@ -1,6 +1,24 @@
-@import '../../utilities/variables';
+@import "../../utilities/variables";
 
-.total{
+.total {
   background-color: $bg;
   height: 6vh;
+  h2 {
+    display: flex;
+    flex-direction: row;
+    p {
+      margin-left: 4px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .total {
+    h2 {
+      flex-direction: column;
+      p {
+        margin-left: 0;
+      }
+    }
+  }
 }

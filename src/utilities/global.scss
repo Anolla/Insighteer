@@ -31,6 +31,7 @@ main {
   background-color: $bg;
 }
 
+
 .daily {
   background-color: white;
   margin-bottom: 2vh;
@@ -80,4 +81,24 @@ h2 {
 ::-webkit-scrollbar {
   width: 4px;
   height: 4px;
+}
+
+@media only screen and (max-width: 768px)  {
+  main{
+    margin-left: 0;
+  }
+
+  .daily {
+    height:fit-content;
+  }
+
+  .blocks {
+    flex-wrap: wrap;
+    height: auto;
+    .item {
+      width: 100%;
+      margin-bottom: 15px;
+      height: 35vh;
+    }
+  }
 }

@@ -10,4 +10,15 @@ header{
   background-color: $dark;
   z-index: 1;
   box-shadow: 0 0 0.5px 0.2px black;
+  #ham-menu{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px)  {
+  #ham-menu{
+    display:initial !important;
+    position: absolute;
+    left: 5px;
+  }
 }

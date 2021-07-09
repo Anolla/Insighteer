@@ -1,11 +1,11 @@
-@import '../../utilities/variables';
-.ticketStatus{
+@import "../../utilities/variables";
+.ticketStatus {
   height: 10vh;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  .item2{
+  .item2 {
     text-align: center;
     height: 100%;
     width: 31% !important;
@@ -14,4 +14,15 @@
   }
   margin-top: 2vh;
   margin-bottom: 2vh;
+}
+
+@media only screen and (max-width: 768px) {
+  .ticketStatus {
+    flex-wrap: wrap;
+    height: auto;
+    margin-bottom: 0;
+    .item2 {
+      width: 100% !important;
+    }
+  }
 }

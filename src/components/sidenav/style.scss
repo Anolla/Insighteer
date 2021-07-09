@@ -12,3 +12,18 @@
   overflow: auto;
   // zoom:0.8
 }
+
+@media only screen and (max-width: 768px)  {
+  .sidenav{
+    display: none;
+  }
+  .list{
+    h2{
+      font-size: 18px;
+    }
+    span{
+      font-size: 14px;
+
+    }
+  }
+}

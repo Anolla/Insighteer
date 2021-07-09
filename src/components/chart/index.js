@@ -20,14 +20,24 @@ function Chart() {
 
   var myConfig = {
     type: "bar",
+    gui: {
+      contextMenu: {
+        button: {
+          visible: false
+        },
+        empty: true
+      },
+    },
     plotarea: {
       adjustLayout: true
     },
     scaleX: {
+      // itemsOverlap: true,
+      maxItems:24,
       label: {
         text: "Tickets Track"
       },
-      labels: data[0]
+      labels: data[0],
     },
     series: [{
       values: data[1],

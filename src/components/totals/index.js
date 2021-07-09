@@ -7,8 +7,8 @@ function Totals() {
   const context = useContext(DataContext);
   // context.totals
   return <Grid
-    templateColumns="repeat(4, 1fr)"
-    gap={6}
+    templateColumns="repeat(3, 1fr)"
+    gap={2}
     className='total'
   >
     <GridItem d='flex' justifyContent='space-evenly' alignContent='center' colSpan={1} >
@@ -16,13 +16,13 @@ function Totals() {
       <Divider orientation="vertical" />
     </GridItem>
     <GridItem d='flex' justifyContent='space-evenly' alignContent='center' colSpan={2}>
-      <Heading  fontWeight='500' className='flexCol' size='xs'>{context.totals.tickets} Tickets</Heading>
-      <Heading  fontWeight='500' className='flexCol' size='xs'>{context.totals.students} Students</Heading>
-      <Heading  fontWeight='500' className='flexCol' size='xs'>{context.totals.TAs} TAs</Heading>
+      <Heading  fontWeight='500' className='flexCol' size='xs'>{context.totals.tickets} <p>Tickets</p></Heading>
+      <Heading  fontWeight='500' className='flexCol' size='xs'>{context.totals.students} <p>Students</p></Heading>
+      <Heading  fontWeight='500' className='flexCol' size='xs'>{context.totals.TAs} <p>TAs</p></Heading>
     </GridItem>
 
-    <GridItem colSpan={1}>
-    </GridItem>
+    {/* <GridItem colSpan={1}>
+    </GridItem> */}
 
   </Grid>
 }
