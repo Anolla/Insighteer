@@ -56,7 +56,7 @@ function TaState() {
     <Box className='item' borderWidth="0px" p='6' overflow="hidden">
       <Heading size='sm'>TA Status</Heading>
       <Box className='flexCol' justifyContent='center' h='100%' w='100%' >
-        <Image title={imageInfo.message} src={imageInfo.face} />
+        <Image fallbackSrc={chilling}  title={imageInfo.message} src={imageInfo.face} />
         <Heading fontWeight='500' pb='5px' size='xs'>{imageInfo.message}</Heading>
 
       </Box>
