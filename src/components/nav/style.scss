@@ -1,6 +1,6 @@
-@import '../../utilities/variables';
+@import "../../utilities/variables";
 
-header{
+header {
   position: fixed;
   top: 0;
   right: 0;
@@ -10,14 +10,28 @@ header{
   background-color: $dark;
   z-index: 1;
   box-shadow: 0 0 0.5px 0.2px black;
-  #ham-menu{
+  #ham-menu {
     display: none;
+  }
+  .chakra-menu__menu-button {
+    position: absolute;
+    right: 5px;
+    width: 72px;
+    height: 3.5vh;
+    font-size: 13px;
+    font-weight: 400;
+    background-color: #385898;
+    padding: 2px;
+    border-radius: 3px;
+  }
+  .settings-list{
+    font-size: 14px;
   }
 }
 
-@media only screen and (max-width: 768px)  {
-  #ham-menu{
-    display:initial !important;
+@media only screen and (max-width: 900px) {
+  #ham-menu {
+    display: initial !important;
     position: absolute;
     left: 5px;
   }

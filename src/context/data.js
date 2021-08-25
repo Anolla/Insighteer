@@ -3,10 +3,13 @@ import { socket } from "./socket";
 import superagent from 'superagent'
 
 
+
 export const DataContext = createContext();
 
 export default function Data(props) {
-  const [test, setTest] = useState("from context");
+  const [activeCourses, setActiveCourses] = useState(JSON.parse(localStorage.getItem('courses')) ? JSON.parse(localStorage.getItem('courses')) : []);
+  const [playing, setPlaying] = useState(false)
+  const [song, setSong] = useState(localStorage.getItem('sound') ? localStorage.getItem('sound') : 'sound1')
   const [totals, setTotals] = useState({ tickets: 0, TAs: 44, students: 396 });
   const [users, setUsers] = useState({ available: [], inTicket: [], notAvailable: [], excused: [] });
   const [chart, setChart] = useState([]);
@@ -17,6 +20,7 @@ export default function Data(props) {
     avgOpened: 0,
     avgTicketsPerStudent: 1
   });
+  const [audio, setAudio] = useState(new Audio(`${window.location.origin}/sounds/${song}.mp3`))
 
   const loadAll = async () => {
     const results = await superagent.get('https://bot.codeowners.net/all');
@@ -29,6 +33,15 @@ export default function Data(props) {
     setDailyTicketsLevels(payload.dailyTicketsLevels);
     setDailyTicketsInfo(payload.dailyTicketsInfo);
     setAverage(payload.average);
+  }
+
+  const playSound = () => {
+    if (!playing) {
+      // audio.addEventListener("canplaythrough", event => {
+      audio.play();
+      // });
+      setPlaying(true)
+    }
   }
   useEffect(() => {
 
@@ -49,7 +62,7 @@ export default function Data(props) {
       // console.log("createTicket");
     });
     socket.on("claimUnclaimCloseTicket", (payload) => {
-      console.log("from server", payload);
+      // console.log("from server", payload);
       setUsers(payload.users);
       setDailyTicketsInfo(payload.dailyTicketsInfo);
       setAverage(payload.average);
@@ -60,37 +73,32 @@ export default function Data(props) {
       setUsers(payload.users);
       // console.log("changeRoom");
     });
+    socket.on("sound", (payload) => {
+      // if (activeCourses.includes(payload))
+      playSound(payload)
+    });
 
-    // let x = 0;
-    // setInterval(()=>{
-    //   if(x == 4){x =0}
-    //   const arr = [[0,1,1] ,[0,1,0] , [0,1,0], [1,1,0] , [1,0,0]]
-
-    //   console.log('done' , arr[x])
-    //   setUsers({available : arr[x][1]});
-    //   setDailyTicketsInfo({opened : arr[x][0] , claimed : arr[x][2]});
-    //   x++
-    //   console.log(x)
-  
-    // },5000)
+    audio.addEventListener('ended', () => setPlaying(false));
+    return () => {
+      audio.removeEventListener('ended', () => setPlaying(false));
+    }
   }, []);
 
-
-
-
-
-
-
+  useEffect(() => {
+    localStorage.setItem('sound', song)
+    setAudio(new Audio(`${window.location.origin}/sounds/${song}.mp3`))
+  }, [song])
 
   const state = {
-    test,
-    setTest,
     totals,
     users,
     chart,
     dailyTicketsLevels,
     dailyTicketsInfo,
-    average
+    average,
+    setActiveCourses,
+    setSong,
+    song
   };
 
 
