@@ -22,7 +22,6 @@ export default function Data(props) {
     const results = await superagent.get('https://bot.codeowners.net/all');
     const payload = results.body;
 
-    // console.log("from server", payload);
     setUsers(payload.users);
     setTotals(payload.total);
     setChart(payload.chart);
@@ -49,7 +48,6 @@ export default function Data(props) {
       // console.log("createTicket");
     });
     socket.on("claimUnclaimCloseTicket", (payload) => {
-      console.log("from server", payload);
       setUsers(payload.users);
       setDailyTicketsInfo(payload.dailyTicketsInfo);
       setAverage(payload.average);
@@ -83,8 +81,6 @@ export default function Data(props) {
 
 
   const state = {
-    test,
-    setTest,
     totals,
     users,
     chart,

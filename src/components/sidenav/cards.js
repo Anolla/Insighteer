@@ -1,5 +1,7 @@
-import { Box, Avatar, Badge, Tooltip,Heading } from "@chakra-ui/react";
+import { Box, Avatar, Badge, Tooltip, Heading } from "@chakra-ui/react";
 import moment from 'moment'
+import { ArrowUpIcon, ArrowDownIcon } from '@chakra-ui/icons'
+
 
 function Card(props) {
   return props.users.map((user) => {
@@ -17,7 +19,7 @@ function Card(props) {
               ml="2"
             >
               <Heading fontSize='xs' fontWeight='500'>
-              {user.name}
+                {user.name}
               </Heading>
             </Box>
             <Tooltip label="Points" aria-label="A tooltip">
@@ -29,6 +31,11 @@ function Card(props) {
           <Box color="gray" fontSize="xs" paddingTop="2">
             Last Ticket: {user.last ? moment(user.last * 1000).startOf('s').fromNow() : 'none'}
           </Box>
+          <Tooltip label="Feedback" aria-label="A tooltip">
+            <Box textAlign='right' color="gray" fontSize="xs" paddingTop="2">
+              <ArrowUpIcon size="10px" color='green' /> {user.up} | {user.down}  <ArrowDownIcon size="10px" color='red' />
+            </Box>
+          </Tooltip>
 
         </Box>
       </Box>
