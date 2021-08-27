@@ -11,7 +11,9 @@ function Card(props) {
 
         <Box p="2">
           <Box d="flex" justifyContent="space-between" alignItems="center">
-            <Avatar size='sm' name={user.name} src={user.avatar} />
+            <Tooltip label={'Total Points: ' + user.total} aria-label="A tooltip">
+              <Avatar size='sm' name={user.name} src={user.avatar} />
+            </Tooltip>
             <Box
               color="black.500"
               fontWeight="semibold"
