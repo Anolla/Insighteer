@@ -36,7 +36,6 @@ function Card(props) {
               <ArrowUpIcon size="10px" color='green' /> {user.up} | {user.down}  <ArrowDownIcon size="10px" color='red' />
             </Box>
           </Tooltip>
-
         </Box>
       </Box>
     )
